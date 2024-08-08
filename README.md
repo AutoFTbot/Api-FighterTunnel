@@ -13,7 +13,7 @@ Berikut adalah daftar endpoint yang tersedia di API ini:
 | `DELETE` | `/api/delvmess`         | `user`                    | -                | Hapus Akun VMESS                       |
 | `DELETE` | `/api/deltrojan`        | `user`                    | -                | Hapus Akun TROJAN                      |
 | `DELETE` | `/api/delvless`         | `user`                    | -                | Hapus Akun VLESS                       |
-| `GET`    | `/api/adduser/exp`      | `user`, `password`, `exp` | -                | Tambah Pengguna dengan Expiry         |
+| `GET`    | `/api/adduser/exp`      | `user`, `password`, `exp` | -                | Buat Akun SSH         |
 | `GET`    | `/api/create-trojan`    | `user`, `exp`, `quota`, `limitip` | -          | Buat Akun TROJAN                       |
 | `GET`    | `/api/create-vmess`     | `user`, `exp`, `quota`, `limitip` | -          | Buat Akun VMESS                       |
 | `GET`    | `/api/create-vless`     | `user`, `exp`, `quota`, `limitip` | -          | Buat Akun VLESS                       |
