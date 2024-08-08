@@ -13,10 +13,10 @@ Berikut adalah daftar endpoint yang tersedia di API ini:
 | `DELETE` | `/api/delvmess`         | `user`                    | -                | Hapus Akun VMESS                       |
 | `DELETE` | `/api/deltrojan`        | `user`                    | -                | Hapus Akun TROJAN                      |
 | `DELETE` | `/api/delvless`         | `user`                    | -                | Hapus Akun VLESS                       |
-| `GET`    | `/api/adduser/exp`      | `user`, `password`, `exp` | -                | Tambah Pengguna dengan Expiry          |
-| `GET`    | `/api/create-trojan`    | `user`, `exp`, `quota`, `limitip` | -        | Buat Akun TROJAN                     |
-| `GET`    | `/api/create-vmess`     | `user`, `exp`, `quota`, `limitip` | -        | Buat Akun VMESS                      |
-| `GET`    | `/api/create-vless`     | `user`, `exp`, `quota`, `limitip` | -        | Buat Akun VLESS                      |
+| `GET`    | `/api/adduser/exp`      | `user`, `password`, `exp` | -                | Tambah Pengguna dengan Expiry         |
+| `GET`    | `/api/create-trojan`    | `user`, `exp`, `quota`, `limitip` | -          | Buat Akun TROJAN                       |
+| `GET`    | `/api/create-vmess`     | `user`, `exp`, `quota`, `limitip` | -          | Buat Akun VMESS                       |
+| `GET`    | `/api/create-vless`     | `user`, `exp`, `quota`, `limitip` | -          | Buat Akun VLESS                       |
 
 ## Cara Menggunakan
 
@@ -70,7 +70,7 @@ Berikut adalah daftar endpoint yang tersedia di API ini:
 
 ### Tambah Pengguna dengan Expiry
 **Request:**
-- Method: `POST`
+- Method: `GET`
 - Path: `/api/adduser/exp`
 - Query Parameters:
   - `user`: Nama pengguna yang akan ditambahkan.
@@ -82,7 +82,7 @@ Berikut adalah daftar endpoint yang tersedia di API ini:
 
 ### Buat Akun TROJAN
 **Request:**
-- Method: `POST`
+- Method: `GET`
 - Path: `/api/create-trojan`
 - Query Parameters:
   - `user`: Nama pengguna untuk akun TROJAN.
@@ -95,7 +95,7 @@ Berikut adalah daftar endpoint yang tersedia di API ini:
 
 ### Buat Akun VMESS
 **Request:**
-- Method: `POST`
+- Method: `GET`
 - Path: `/api/create-vmess`
 - Query Parameters:
   - `user`: Nama pengguna untuk akun VMESS.
@@ -108,7 +108,7 @@ Berikut adalah daftar endpoint yang tersedia di API ini:
 
 ### Buat Akun VLESS
 **Request:**
-- Method: `POST`
+- Method: `GET`
 - Path: `/api/create-vless`
 - Query Parameters:
   - `user`: Nama pengguna untuk akun VLESS.
@@ -119,3 +119,15 @@ Berikut adalah daftar endpoint yang tersedia di API ini:
 **Response:**
 - Membuat akun VLESS dengan parameter yang diberikan.
 
+## Keamanan
+
+API ini menggunakan metode keamanan berikut:
+
+1. **Autentikasi API Key**:
+   - Semua permintaan harus menyertakan API key yang valid. API key dapat dikirim melalui header `Authorization` atau sebagai parameter query `api_key`.
+
+2. **Validasi IP**:
+   - Hanya IP yang terdaftar yang dapat mengakses endpoint API. IP yang tidak terdaftar akan ditolak.
+
+3. **Metode GET untuk Pengguna dan Pembuatan Akun**:
+   - Endpoint `adduser` dan `create` menggunakan metode GET untuk memudahkan integrasi, tetapi tetap memerlukan autentikasi API key dan validasi IP.
