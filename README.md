@@ -119,8 +119,3 @@ Berikut adalah daftar endpoint yang tersedia di API ini:
 **Response:**
 - Membuat akun VLESS dengan parameter yang diberikan.
 
-## Instalasi
-
-1. Clone repositori ini:
-   ```bash
-   git clone https://github.com/AutoFTbot/Api-FighterTunnel.git
