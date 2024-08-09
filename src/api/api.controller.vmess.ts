@@ -74,7 +74,7 @@ export class ApiVmessController {
 
 𝙐𝙨𝙚𝙧𝙣𝙖𝙢𝙚: ${user}  
 𝘽𝙚𝙧𝙖𝙠𝙝𝙞𝙧 𝘿𝙖𝙡𝙖𝙢: ${exp} 𝘿𝙖𝙮  
-𝙒𝙚𝙗𝙨𝙞𝙩𝙚: ${webName}
+𝙎𝙀𝙍𝙑𝙀𝙍: ${webName}
 
 Terima kasih telah memilih kami!
     `;
