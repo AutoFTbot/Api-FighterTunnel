@@ -134,8 +134,11 @@ API ini menggunakan metode keamanan berikut:
 
 
 ## Install
+ **PERTAMA**
 1.`curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash`
+
 2.`source ~/.nvm/nvm.sh`
+
 3.`nvm install node`
 4.`nvm use node`
 
