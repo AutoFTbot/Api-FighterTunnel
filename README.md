@@ -133,14 +133,15 @@ API ini menggunakan metode keamanan berikut:
    - Endpoint `adduser` dan `create` menggunakan metode GET untuk memudahkan integrasi, tetapi tetap memerlukan autentikasi API key dan validasi IP. 
 
 
-## Install
- **PERTAMA**
-1.`curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash`
+## Install paket yang di butuhkan
 
-2.`source ~/.nvm/nvm.sh`
+  1.`curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash`
 
-3.`nvm install node`
-4.`nvm use node`
+  2.`source ~/.nvm/nvm.sh`
+
+  3.`vm install node`
+
+  4.`nvm use node`
 
 ## Service
 pm2 only
