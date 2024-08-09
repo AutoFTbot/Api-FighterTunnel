@@ -130,4 +130,14 @@ API ini menggunakan metode keamanan berikut:
    - Hanya IP yang terdaftar yang dapat mengakses endpoint API. IP yang tidak terdaftar akan ditolak.
 
 3. **Metode GET untuk Pengguna dan Pembuatan Akun**:
-   - Endpoint `adduser` dan `create` menggunakan metode GET untuk memudahkan integrasi, tetapi tetap memerlukan autentikasi API key dan validasi IP.
+   - Endpoint `adduser` dan `create` menggunakan metode GET untuk memudahkan integrasi, tetapi tetap memerlukan autentikasi API key dan validasi IP. 
+
+
+## Install
+1.`curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash`
+2.`source ~/.nvm/nvm.sh`
+3.`nvm install node`
+4.`nvm use node`
+
+## Service
+pm2 only
