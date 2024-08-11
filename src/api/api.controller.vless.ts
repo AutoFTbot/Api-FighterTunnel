@@ -15,16 +15,13 @@ export class ApiVlessController {
       if (!vlessUrls || vlessUrls.length < 3) {
         return { status: 'error', message: 'No Vless URLs found or insufficient URLs.' };
       }
-
       const config = fs.readFileSync('/etc/ftvpn/var.txt', 'utf-8').split('\n');
       const DOMAIN = config.find(line => line.startsWith('DOMAIN')).split('=')[1].replace(/"/g, '').trim();
       const PUB = config.find(line => line.startsWith('PUB')).split('=')[1].replace(/"/g, '').trim();
       const HOST = config.find(line => line.startsWith('HOST')).split('=')[1].replace(/"/g, '').trim();
-
       if (!DOMAIN || !PUB || !HOST) {
         return { status: 'error', message: 'Error fetching configuration data from /etc/ftvpn/var.txt' };
       }
-
       const vlessUrl = vlessUrls[0].replace('vless://', '').trim();
       const userId = vlessUrl.split('@')[0];
       const remarks = vlessUrl.match(/#(.*)/) ? vlessUrl.match(/#(.*)/)[1] : user;

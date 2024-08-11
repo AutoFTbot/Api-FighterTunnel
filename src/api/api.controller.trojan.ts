@@ -9,7 +9,7 @@ dotenv.config();
 
 const botToken = process.env.TELEGRAM_BOT_TOKEN;
 const chatId = process.env.TELEGRAM_CHAT_ID;
-const webName = process.env.WEB;
+const servername = process.env.SERVER;
 const UrlWeb = process.env.WEB_URL;
 const bot = new TelegramBot(botToken);
 
@@ -75,7 +75,7 @@ export class ApiTrojanController {
 
 𝙐𝙨𝙚𝙧𝙣𝙖𝙢𝙚: ${user}  
 𝘽𝙚𝙧𝙖𝙠𝙝𝙞𝙧 𝘿𝙖𝙡𝙖𝙢: ${exp} 𝘿𝙖𝙮  
-𝙎𝙀𝙍𝙑𝙀𝙍: ${webName}
+𝙎𝙀𝙍𝙑𝙀𝙍: ${servername}
 
 Terima kasih telah memilih kami!
         `;

@@ -5,14 +5,12 @@ import { execSync } from 'child_process';
 export class ApiDelController {
 
   private getUserIndex(users: string[], user: string): number | undefined {
-    return users.findIndex(u => u.includes(user)) + 1; // +1 to match nl output
+    return users.findIndex(u => u.includes(user)) + 1;
   }
-
   private getUserList(dbPath: string): string[] {
     const listCmd = `grep -E "^### " "${dbPath}" | cut -d ' ' -f 2-3`;
     return execSync(listCmd).toString().trim().split('\n');
   }
-
   private formatUserList(users: string[]): string {
     return users.map((u, index) => `${index + 1}) ${u}`).join('\n');
   }
@@ -38,7 +36,6 @@ export class ApiDelController {
         return { error: "User not found." };
       }
     }
-
     return {
       message: "SSH users:",
       sshUsers: listResult.split('\n')
@@ -50,7 +47,6 @@ export class ApiDelController {
     const dbPath = "/etc/vmess/.vmess.db";
     let vmessUsers = this.getUserList(dbPath);
     let listResult = this.formatUserList(vmessUsers);
-
     if (user) {
       const index = this.getUserIndex(vmessUsers, user);
       if (index) {
